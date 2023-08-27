@@ -1,2 +1,25 @@
 # FLaNK-SaoPauloBrazil
 FLaNK-SaoPauloBrazil
+
+
+### Links
+
+https://en.wikipedia.org/wiki/GTFS_Realtime
+
+https://www.kaggle.com/datasets/mateuscco/sao-paulo-transportation-service
+
+https://www.sptrans.com.br/desenvolvedores/
+
+https://transitfeeds.com/p/sptrans/1049
+
+https://transitfeeds.com/p/sptrans/1049/latest/file/routes.txt
+
+https://en.wikipedia.org/wiki/Transport_in_S%C3%A3o_Paulo
+
+### Data
+
+http://www.sptrans.com.br/umbraco/Surface/PerfilDesenvolvedor/BaixarGTFS
+
+https://www.sptrans.com.br/
+
+https://www.sptrans.com.br/desenvolvedores/
