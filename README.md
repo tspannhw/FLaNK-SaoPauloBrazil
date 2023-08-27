@@ -29,3 +29,16 @@ https://www.sptrans.com.br/desenvolvedores/perfil-desenvolvedor/meus-aplicativos
 https://www.sptrans.com.br/desenvolvedores/api-do-olho-vivo-guia-de-referencia/
 
 https://www.sptrans.com.br/desenvolvedores/api-do-olho-vivo-guia-de-referencia/documentacao-api/
+
+
+### REST API
+
+ http://api.olhovivo.sptrans.com.br/v2.1 
+
+ See an example:
+ 
+POST/Login/Authenticate?token={token}
+
+
+
+ 
