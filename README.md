@@ -23,3 +23,7 @@ http://www.sptrans.com.br/umbraco/Surface/PerfilDesenvolvedor/BaixarGTFS
 https://www.sptrans.com.br/
 
 https://www.sptrans.com.br/desenvolvedores/
+
+https://www.sptrans.com.br/desenvolvedores/perfil-desenvolvedor/meus-aplicativos/
+
+https://www.sptrans.com.br/desenvolvedores/api-do-olho-vivo-guia-de-referencia/
