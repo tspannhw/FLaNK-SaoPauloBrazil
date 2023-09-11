@@ -1,0 +1,178 @@
+<html>
+<head>
+<title>Brazil SPTrans - FLaNK Stack with NiFi, Kafka, Flink, Materialize View HTML</title>
+<link rel="stylesheet" type="text/css"  href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<meta charset="UTF-8">
+<!-- include leaflet css and javascript -->
+<link rel="stylesheet" crossorigin="" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" crossorigin=""></script>
+
+<style type="text/css">
+    #map {
+        height: 450px;
+    }
+</style>
+</head>
+<body bgcolor="white" text="black">
+
+<div style="font-size: 30; font-weight: bold; font-family: sans-serif;">
+    <p>
+        <strong><b>NiFi/Kafka/Flink - Data Tables - Brazil SPTrans</b></strong>
+     </p>
+</div>
+<br>
+
+<div id="map"></div>
+
+<script type="text/javascript">
+
+    const customerIcon =  L.icon({
+        iconUrl: "./images/blue-dot.png",
+        className: "image-icon",
+        iconSize: [20, 20]
+    });
+
+    const carIcon = L.icon({
+        iconUrl: "./images/car-icon-side-9.jpeg",
+        className: "image-icon",
+        iconSize: [30, 30]
+    });
+
+    var map = null;
+    var marker = null;
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4){
+            // document.getElementById('result').innerHTML = xhr.responseText;
+            // https://dev.to/nikola/making-ajax-calls-in-pure-javascript-the-old-way-ed5
+            var buslocation = JSON.parse(xhr.responseText);
+
+            //console.log( xhr.responseText );
+
+            //console.log( buslocation );
+
+            let i = 0;
+            if (map == null) {
+                map = L.map('map').setView([buslocation[i].latitude, buslocation[i].longitude], 14);
+                L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                    attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
+                }).addTo(map);
+
+                let marker = new L.marker([buslocation[i].latitude, buslocation[i].longitude], { icon: customerIcon }).addTo(map);
+            }
+
+            i++;
+            while (i < buslocation.length) {
+                //console.log(buslocation[i]);
+
+                // if (marker != null) {
+                //     map.removeLayer(marker);
+                // }
+                marker = new L.marker([buslocation[i].latitude, buslocation[i].longitude], { icon: customerIcon }).addTo(map).bindPopup('Line:' + buslocation[i].lineidentifier +
+                     ' Origin:'+ buslocation[i].lineoriginsign + ' Destination:' + buslocation[i].linedestinationsign).openPopup();
+
+                i++;
+            }
+        }
+
+    };
+
+    xhr.open('GET', 'http://localhost:18131/api/v1/query/5247/transit?key=735d2c94-b8cf-4dbe-9991-4e6253a3bd44&limit=1000');
+    xhr.send();
+
+</script>
+
+<br>
+<table id="transit1" class="display" style="width:100%; text-align:left;">
+        <thead>
+            <tr>
+                       <th valign="left"><b>HR</b></th>
+                       <th valign="left"><b>Vehicle</b></th>
+                       <th valign="left"><b>Line ID</b></th>
+                       <th valign="left"><b>Line Origin</b></th>
+                       <th valign="left"><b>Line Destination</b></th>
+                       <th valign="left"><b>Lat/Long</b></th>
+                       <th valign="left"><b>Date/Time</b></th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                       <th valign="left"><b>HR</b></th>
+                       <th valign="left"><b>Vehicle</b></th>
+                       <th valign="left"><b>Line ID</b></th>
+                       <th valign="left"><b>Line Origin</b></th>
+                       <th valign="left"><b>Line Destination</b></th>
+                       <th valign="left"><b>Lat/Long</b></th>
+                       <th valign="left"><b>Date/Time</b></th>
+            </tr>
+        </tfoot>
+    </table>
+<script>
+function isEmpty(val){
+    return (val === undefined || val == null || val.length <= 0) ? true : false;
+}
+function IsJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+$(document).ready(function() {
+    var t = $('#transit1').DataTable();
+
+$.getJSON(
+    'http://localhost:18131/api/v1/query/5247/transit?key=735d2c94-b8cf-4dbe-9991-4e6253a3bd44&limit=1000', 
+    function(data) {
+      $.each( data, function( key, val ) {
+        console.log( data[key].hr );
+
+        var hr= "";
+        if ( !isEmpty(data[key].hr) ) {
+            hr = data[key].hr;
+        }
+        var vehicleprefix= "";
+        if ( !isEmpty(data[key].vehicleprefix) ) {
+            vehicleprefix = data[key].vehicleprefix;
+        }
+        var lineidentifier= "";
+        if ( !isEmpty(data[key].lineidentifier) ) {
+            lineidentifier = data[key].lineidentifier;
+        }
+        var linedestinationsign= "";
+        if ( !isEmpty(data[key].linedestinationsign) ) {
+            linedestinationsign = data[key].linedestinationsign;
+        }
+        var lineoriginsign= "";
+        if ( !isEmpty(data[key].lineoriginsign) ) {
+            lineoriginsign = data[key].lineoriginsign;
+        }
+        var latitude= "";
+        if ( !isEmpty(data[key].latitude) ) {
+            latitude = data[key].latitude;
+        }
+        var longitude= "";
+        if ( !isEmpty(data[key].longitude) ) {
+            longitude = data[key].longitude;
+        }
+        var ta= "";
+        if ( !isEmpty(data[key].ta) ) {
+            ta = data[key].ta;
+        }
+
+        t.row.add( [ hr, vehicleprefix, lineidentifier, lineoriginsign,
+                     linedestinationsign, (latitude + "," + longitude), ta ]).draw(true);
+      });
+    });
+}); 
+</script>
+<p>
+<br></p>
+<p><br></p><br>
+&copy; 2021-2022-2023 Tim Spann @PaasDev - datainmotion.dev
+<br>           
+</body>
+</html>
