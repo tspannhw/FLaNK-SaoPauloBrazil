@@ -16,6 +16,8 @@ https://transitfeeds.com/p/sptrans/1049/latest/file/routes.txt
 
 https://en.wikipedia.org/wiki/Transport_in_S%C3%A3o_Paulo
 
+https://gtfs.org/realtime/feed-entities/trip-updates/
+
 ### Data
 
 http://www.sptrans.com.br/umbraco/Surface/PerfilDesenvolvedor/BaixarGTFS
