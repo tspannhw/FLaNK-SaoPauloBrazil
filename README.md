@@ -1,12 +1,23 @@
 # FLaNK-SaoPauloBrazil
+
 FLaNK-SaoPauloBrazil
 
+
+
+Flow
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilflow2.jpg?raw=true)
 
 
 
 Showing the data
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/assets/18673814/1556d953-ac87-4788-b5d2-2556eb5401d3)
+
+
+Flink SQL Query
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/ssbquerypick.jpg?raw=true)
 
 
 ### Links
