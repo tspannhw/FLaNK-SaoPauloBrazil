@@ -2,12 +2,20 @@
 
 FLaNK-SaoPauloBrazil
 
+Maps
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilmap2.jpg?raw=true)
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilmap3.jpg?raw=true)
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilmap4.jpg?raw=true)
 
 
 Flow
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilflow2.jpg?raw=true)
 
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilflow2.jpg?raw=true)
 
 
 Showing the data
@@ -18,6 +26,15 @@ Showing the data
 Flink SQL Query
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/ssbquerypick.jpg?raw=true)
+
+Flink Materialized View
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/materializedviewflink.jpg?raw=true)
+
+HTML Display Code
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/getJsonToTableSPTrans.jpg?raw=true)
+
 
 
 ### Links
