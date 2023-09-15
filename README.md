@@ -17,24 +17,38 @@ Flow
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilflow2.jpg?raw=true)
 
+![x](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/sptranshtmlreport.jpg?raw=true)
+
 
 Showing the data
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/assets/18673814/1556d953-ac87-4788-b5d2-2556eb5401d3)
 
+SMM Kafka Topic Data
+![k](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/sptransvehiclepositionskafka.jpg?raw=true)
+
+Flink SQL Virtual Kafka Table
+
+![k](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/sptransflinktable.jpg?raw=true)
+![k2](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/ssbinferedschematable.jpg?raw=true)
 
 Flink SQL Query
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/ssbquerypick.jpg?raw=true)
+![x](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/ssbqueryflink.jpg?raw=true)
 
 Flink Materialized View
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/materializedviewflink.jpg?raw=true)
 
+Flink Materialized View REST Endpoint as JSON
+
+![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/restsptrans.jpg?raw=true)
+
+
 HTML Display Code
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/getJsonToTableSPTrans.jpg?raw=true)
-
 
 
 ### Links
