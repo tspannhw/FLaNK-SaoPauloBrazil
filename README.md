@@ -2,6 +2,20 @@
 
 FLaNK-SaoPauloBrazil
 
+#### SQL
+
+````
+select SPTransVehiclePositionsCluster.uuid, SPTransVehiclePositionsCluster.hr, SPTransVehiclePositionsCluster.vehicleprefix, 
+       SPTransVehiclePositionsCluster.lineidentifier, 
+       SPTransVehiclePositionsCluster.linedestinationsign, SPTransVehiclePositionsCluster.lineoriginsign,
+       SPTransVehiclePositionsCluster.direction,  
+       SPTransVehiclePositionsCluster.latitude,  SPTransVehiclePositionsCluster.longitude, 
+       SPTransVehiclePositionsCluster.utcts,SPTransVehiclePositionsCluster.ta
+from SPTransVehiclePositionsCluster
+
+````
+
+
 Maps
 
 ![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/blob/main/images/brazilmap2.jpg?raw=true)
@@ -93,13 +107,7 @@ POST/Login/Authenticate?token={token}
 
 ### videos
 
-![image](https://github.com/tspannhw/FLaNK-SaoPauloBrazil/assets/18673814/61f31256-318d-4716-aff0-bcfd635fe865)
 
 https://youtu.be/nXjsk5CGygE?si=9MlrRBsSNBTFywxI
 
 https://www.youtube.com/watch?v=menGbueOAK8
-
-
-
-
- 
