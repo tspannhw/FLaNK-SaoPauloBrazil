@@ -4,7 +4,7 @@ FLaNK-SaoPauloBrazil
 
 #### Slides
 
-[https://www.slideshare.net/ssuser73434e/meetup-brasil-data-in-motion-2023-september-19](https://www.slideshare.net/bunkertor/meetup-brasil-data-in-motion-2023-september-19-261164487)
+https://www.slideshare.net/bunkertor/meetup-brasil-data-in-motion-2023-september-19-261164487
 
 
 #### FLINK SQL / SSB Query
